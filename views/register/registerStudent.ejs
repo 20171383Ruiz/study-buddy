@@ -1,0 +1,145 @@
+<%- include('../partials/header') %>
+
+</head>
+
+<body>
+    <section class="register">
+        <header>
+            <nav class="navbar justify-content-center shadow-sm">
+                <h1 class="brand">Study <span>Buddy</span></h1>
+            </nav>
+        </header>
+        <main>
+            <div class="container-fluid shadow">
+                <h2 class="mb-5">Registrarse como Estudiante</h2>
+                <form class="needs-validation" novalidate>
+
+                    <!-- Tarjeta de Datos Personales -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-user"></i> Datos Personales</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="given-name">Nombres</label>
+                                    <input type="text" class="form-control" id="given-name" name="names" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere nombre(s) valido.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="surname">Apellidos</label>
+                                    <input type="text" class="form-control" id="surname" name="lastNames" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere apellido(s) valido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email">Correo Electronico</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for shipping updates.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="dob">Fecha de Nacimiento</label>
+                                    <div class="datepicker date input-group">
+                                        <input type="text" placeholder="Fecha" class="form-control" id="dob" name="dob" required>
+                                        <div class="input-group-append calendar rounded-right"><span class="input-group-text rounded-right"><i class="fa fa-calendar"></i></span></div>
+                                        <div class="invalid-feedback">*Se requiere fecha de nacimiento.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="phone">Telefono</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere numero telefonico valido
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3 mb-3">
+                                    <label for="doc-type">Tipo de Documento</label>
+                                    <select class="form-control" id="doc-type" required>
+                                        <option selected disabled>Seleccione...</option>
+                                        <option>DNI</option>
+                                        <option>Pasaport</option>
+                                        <option>CE</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="doc-num">N° Docuemnto</label>
+                                    <input type="text" class="form-control" id="doc-num" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere numero de Documento.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de Educacion -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-book-reader"></i> Educacion</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="edu-level">Grado Academico</label>
+                                    <input type="text" class="form-control" id="edu-level" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere grado academico.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="school">Centro Educativo</label>
+                                    <input type="text" class="form-control" id="school" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere centro educativo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lock"></i> Contraseña</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                                    <div class="invalid-feedback">
+                                        *Se requiere contraseña.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar Contraseña" required>
+                                    <div class="invalid-feedback">
+                                        *Confirme Contraseña
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-dark btn-lg register-btn" type="submit">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </section>
+    <script src="/js/registerStudent.js"></script>
+    <%- include('../partials/footer') %>
