@@ -1,0 +1,67 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1,h2,h3{
+    font-weight: 700;
+}
+
+.navbar{
+    padding-left: 15%;
+    padding-right: 15%;
+    /* background: #41444b; */
+}
+
+.brand{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #fddb3a;
+    text-shadow: 1px 1px 2px #41444b;
+}
+
+.brand span{
+    color: #52575d;
+}
+
+.container-fluid{
+    margin: 0 15%;
+    padding: 3% 5%;
+    width: auto;
+    height: 100%;
+
+}
+
+.card{
+    border: none;
+    box-shadow: 0.2px 2px 5px #41444b8e;
+    margin-bottom: 20px;
+}
+
+.card-header{
+    border: none;
+    background-color: #ffe76f;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #fddb3a;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

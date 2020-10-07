@@ -1,0 +1,102 @@
+.login {
+    height: 100vh;
+    background: linear-gradient(to right,
+            rgba($primary-grey, 0.7),
+            rgba($primary-grey, 0.2)), url('../images/login-background.jpg') center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    .secondary-text {
+        color: $primary-dark-yellow;
+    }
+
+    header {
+        padding: 1%;
+        a{
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .custom-logo {
+            width: fit-content;
+            padding: 8px;
+            background: #020202d2;
+
+            h2 {
+                font-weight: 700;
+                margin-bottom: 0;
+                color: white !important;
+
+            }
+        }
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+        a{
+            color: $primary-yellow;
+        }
+        .card {
+            width: fit-content;
+            padding: 4%;
+            border: none;
+            box-shadow: 0.2px 2px 5px #232427e7;
+            background-color: $primary-grey !important;
+            border-radius: 20px;
+
+            .sign-in {
+                width: fit-content;
+            }
+
+            .card-body {
+                display: grid;
+                place-items: center;
+            }
+
+            .form-signin {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+            }
+
+            .form-signin .checkbox {
+                font-weight: 400;
+            }
+
+            .form-signin .form-control {
+                position: relative;
+                box-sizing: border-box;
+                height: auto;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .form-signin .form-control:focus {
+                z-index: 2;
+            }
+
+            .form-signin input[type="email"] {
+                margin-bottom: -1px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            .form-signin input[type="password"] {
+                margin-bottom: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            @include transition-ease;
+        }
+    }
+
+    footer {
+        p {
+            margin: 0;
+        }
+    }
+
+}

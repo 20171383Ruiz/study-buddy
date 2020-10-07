@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+
+</head>
+
+<body>
+    <section class="login">
+        <header>
+
+            <div class="custom-logo">
+                <a href="/">
+                    <h2><span class="secondary-text">Study</span> Buddy</h2>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="card text-white bg-dark">
+                <div class="card-body text-center">
+                    <form class="form-signin" action="/iniciar-sesion" method="POST">
+                        
+                        <h1 class="mb-5 font-weight-bold">¡Bienvenido!<br> <span class="secondary-text">Inicie</span> Sesión</h1>
+                        <input type="email" id="inputEmail" class="form-control" name="username" placeholder="Correo Electronico" required autofocus>
+                        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña" required>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <a href="">Olvide mi contraseña!</a>
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-warning btn-block mb-5" type="submit">Iniciar Sesión</button>
+                        <a href="/registrarse/docente">Registrarme como Docente.</a>
+                        <br>
+                        <a href="/registrarse/estudiante">Registrarme como Estudiante.</a>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="text-center p-3">
+            <p>Universidad de Lima</p>
+        </footer>
+    </section>
+    <%- include('../partials/footer') %>

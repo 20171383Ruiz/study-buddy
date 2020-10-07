@@ -1,0 +1,366 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.availability-table {
+  width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.availability-table thead th:first-child {
+  pointer-events: none;
+  background: white;
+  border: none;
+}
+
+.availability-table td {
+  vertical-align: middle;
+}
+
+.availability-table th {
+  text-align: center;
+}
+
+/*
+ * Custom checkbox CSS, below are three color classes, day, evening, and night
+ */
+.availability-checkbox {
+  min-height: 1rem;
+  padding-left: 0;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.availability-checkbox .custom-control-indicator {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 10px;
+  background-color: #818181;
+  border-radius: 15px;
+  margin-right: 10px;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.availability-checkbox .custom-control-indicator:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 21px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+  left: -2px;
+  top: -4px;
+  -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+  -webkit-transition: left .3s ease, background .3s ease, -webkit-box-shadow .1s ease;
+  transition: left .3s ease, background .3s ease, -webkit-box-shadow .1s ease;
+  transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+  transition: left .3s ease, background .3s ease, box-shadow .1s ease, -webkit-box-shadow .1s ease;
+}
+
+.availability-checkbox .custom-control-input:focus ~ .custom-control-indicator {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/*
+ * Day color codes
+ */
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator {
+  background-color: #5cb85c;
+  background-image: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.checkbox-day .custom-control-input:checked ~ .custom-control-indicator:after {
+  background-color: #5cb85c;
+  left: 15px;
+}
+
+/*
+ * Evening color codes
+ */
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator {
+  background-color: #f0ad4e;
+  background-image: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.checkbox-evening .custom-control-input:checked ~ .custom-control-indicator:after {
+  background-color: #f0ad4e;
+  left: 15px;
+}
+
+/*
+ * Night color codes
+ */
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator {
+  background-color: #428bca;
+  background-image: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.checkbox-night .custom-control-input:checked ~ .custom-control-indicator:after {
+  background-color: #428bca;
+  left: 15px;
+}
+
+.register {
+  /* Safari */
+}
+
+.register .navbar {
+  padding-left: 15%;
+  padding-right: 15%;
+  /* background: #41444b; */
+}
+
+.register .brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fddb3a;
+  text-shadow: 1px 1px 2px #41444b;
+}
+
+.register .brand span {
+  color: #52575d;
+}
+
+.register .container-fluid {
+  margin: 0 15%;
+  padding: 3% 5%;
+  width: auto;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.register .datepicker {
+  padding: 0;
+}
+
+.register .card {
+  border: none;
+  -webkit-box-shadow: 0.2px 2px 5px #41444b8e;
+          box-shadow: 0.2px 2px 5px #41444b8e;
+  margin-bottom: 20px;
+}
+
+.register .card-header {
+  border: none;
+  background-color: #ffe76f;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.register .card-header h4 {
+  margin-bottom: 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.register .card-header h4 i {
+  margin-right: 1%;
+}
+
+.register .created-card .card-header {
+  padding: 0;
+  background: none;
+}
+
+.register .created-card .card-header .remove-button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.register .created-card .card-header .remove-button i {
+  margin: 10px;
+}
+
+.register .loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #fddb3a;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.register .calendar {
+  cursor: pointer;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .register .container-fluid {
+    margin: 0;
+  }
+}
+
+.login {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(24, 24, 24, 0.7)), to(rgba(24, 24, 24, 0.2))), url("../images/login-background.jpg") center;
+  background: linear-gradient(to right, rgba(24, 24, 24, 0.7), rgba(24, 24, 24, 0.2)), url("../images/login-background.jpg") center;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+.login .secondary-text {
+  color: #F5D10D;
+}
+
+.login header {
+  padding: 1%;
+}
+
+.login header a {
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.login header .custom-logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px;
+  background: #020202d2;
+}
+
+.login header .custom-logo h2 {
+  font-weight: 700;
+  margin-bottom: 0;
+  color: white !important;
+}
+
+.login main {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.login main a {
+  color: #F6E71D;
+}
+
+.login main .card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4%;
+  border: none;
+  -webkit-box-shadow: 0.2px 2px 5px #232427e7;
+          box-shadow: 0.2px 2px 5px #232427e7;
+  background-color: #181818 !important;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.login main .card .sign-in {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.login main .card .card-body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.login main .card .form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+}
+
+.login main .card .form-signin .checkbox {
+  font-weight: 400;
+}
+
+.login main .card .form-signin .form-control {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.login main .card .form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.login main .card .form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.login main .card .form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.login footer p {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.css.map */
